@@ -1,0 +1,223 @@
+/*index.html*/
+@keyframes heading {
+    1% {
+        transform: translateX(40%);
+    }
+    20% {
+        text-shadow: 0 1rem 1rem rgba(139, 138, 138, 0.973);
+        transform: translateX(20%) translateY(70%);
+    }
+    30% {
+        text-shadow: 0 1rem 1rem rgb(0, 0, 0);
+        transform: translateX(10%) translateY(-50%);
+    }
+    40% {
+        text-shadow: 0 1rem 1rem rgba(248, 243, 243, 0.973);
+        transform: translateX(0);
+    }
+    50% {
+        text-shadow: 0 1rem 1rem rgba(14, 13, 13, 0.973);
+        transform: translateX(-20%) translateY(70%);
+    }
+    55% {
+        text-shadow: 0 1rem 1rem rgb(245, 239, 239);
+        transform: translateX(-10%) translateY(-80%);
+    }
+    100% {
+        text-shadow: 0 1rem 1rem rgba(15, 15, 15, 0.973);
+        transform: translateX(0);
+    }
+}
+
+@keyframes start {
+    1% {
+        transform: translateY(-300%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    
+}
+@keyframes moveinleft {
+    1% {
+        transform: translateX(-300%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 1;
+    }
+    
+}
+
+.container {
+    animation: moveinleft 1.5s;
+}
+
+.heading {
+    animation: heading 5s;
+    font-size: 5rem;
+    color: rgba(158, 216, 23, 0.74);
+    margin: 4rem 0;
+    text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.973);
+    margin-bottom: 6rem;
+    animation-fill-mode: backwards;
+}
+.start {
+    animation: start 2s;
+    animation-fill-mode: backwards;
+    text-decoration: none;
+    color: rgb(243, 247, 243);
+    background-color: rgba(28, 241, 28, 0.671);
+    padding: .5rem 3rem;
+    letter-spacing: .5rem;
+    border-radius: .8rem;
+    font-size: 2rem;
+    display: inline-block;
+    margin-bottom: 5rem;
+    transition: all .5s;
+}
+.start:hover {
+    background-color: #fff;
+    color: rgb(11, 243, 11);
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes body {
+    1% {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.864), rgba(0, 0, 0, 0.616)), url(img/1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    50% {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.616)), url(img/newslatter.jpg);
+        background-size: cover;
+        background-position: top;
+    }
+    100% {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.807), rgba(0, 0, 0, 0.952)), url(img/3.jpg);
+        background-size: cover;
+        background-position: top;
+    }
+}
+
+body {
+    animation: body 10s infinite alternate;
+    padding: 2rem 8rem;
+    text-align: center;
+}
+
+#heading {
+    color: rgb(52, 245, 52);
+    font-size: 3rem;
+    font-family: sans-serif;
+    margin-bottom: 5rem;
+
+}
+#level {
+    margin-bottom: 2rem;
+    color: rgb(217, 255, 0);
+    text-align: left;
+}
+body p {
+    color: rgb(161, 156, 156);
+    font-size: 2rem;
+}
+
+body h1 {
+    color: #fff;
+}
+#cont a {
+    text-decoration: none;
+    color: #fff;
+    padding: .5rem 3rem;
+    background-color: rgba(57, 126, 57, 0.767);
+    display: inline-block;
+}
+#cont a:hover {
+    background-color: rgba(4, 59, 4, 0.719);
+}
+
+.container .back {
+    text-decoration: none;
+    padding: 1rem 3rem;
+    color: #fff;
+    background-color: rgba(173, 238, 52, 0.253);
+    display: inline-block;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+.container .back:hover {
+    color: #fff;
+    background-color: rgba(247, 25, 99, 0.178);
+}
+
+.link,
+.link:visited {
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+    font-style: italic;
+    transition: all 1s;
+    letter-spacing: 1rem;
+    padding: 2rem 15rem;
+}
+.list {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 2rem 2rem;
+    list-style: none;
+    font-style: italic;
+    transition: all .5s;
+    letter-spacing: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.192);
+}
+.list:hover {
+    background-color: rgba(182, 248, 167, 0.192);
+    transform: translateX(5rem);
+    color: green;
+    
+}
+.link:hover {
+    color: green;
+}
+
+#guess {
+    background-color: rgba(0, 255, 85, 0.637);
+    padding: .5rem 5rem .5rem 1rem;
+    color: white;
+    margin-bottom: 3rem;
+    border: none;
+    transition: all .5s;
+}
+#guess:focus {
+    background-color: rgba(0, 255, 85, 0.308);
+    border: 1px solid #fff;
+} 
+
+#button {
+    padding: .5rem;
+    background-color: rgba(255, 255, 255, 0.925);
+    color: rgb(52, 245, 52);
+    transition: all .5s;
+}
+#button:hover {
+    background-color: rgb(144, 253, 200);
+    color: #fff;
+} 
+
+.content {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.514)), url(img/newslatter.jpg);
+    background-size: cover;
+    animation: none;
+}
