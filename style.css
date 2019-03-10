@@ -60,7 +60,7 @@
     animation: heading 5s;
     font-size: 5rem;
     color: rgba(158, 216, 23, 0.74);
-    margin: 4rem 0;
+    margin: 2rem 0;
     text-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.973);
     margin-bottom: 6rem;
     animation-fill-mode: backwards;
@@ -115,23 +115,25 @@ body {
     animation: body 10s infinite alternate;
     padding: 2rem 8rem;
     text-align: center;
+    background-size: cover;
 }
 
 #heading {
     color: rgb(52, 245, 52);
     font-size: 3rem;
     font-family: sans-serif;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 
 }
 #level {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     color: rgb(217, 255, 0);
     text-align: left;
 }
 body p {
     color: rgb(161, 156, 156);
     font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 body h1 {
@@ -162,6 +164,16 @@ body h1 {
     background-color: rgba(247, 25, 99, 0.178);
 }
 
+
+.list {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 2rem 2rem;
+    list-style: none;
+    transition: all .5s;
+    letter-spacing: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.192);
+}
 .link,
 .link:visited {
     text-decoration: none;
@@ -171,16 +183,6 @@ body h1 {
     transition: all 1s;
     letter-spacing: 1rem;
     padding: 2rem 15rem;
-}
-.list {
-    list-style: none;
-    margin: 1rem 0;
-    padding: 2rem 2rem;
-    list-style: none;
-    font-style: italic;
-    transition: all .5s;
-    letter-spacing: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.192);
 }
 .list:hover {
     background-color: rgba(182, 248, 167, 0.192);
@@ -196,7 +198,7 @@ body h1 {
     background-color: rgba(0, 255, 85, 0.637);
     padding: .5rem 5rem .5rem 1rem;
     color: white;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     border: none;
     transition: all .5s;
 }
@@ -220,4 +222,34 @@ body h1 {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.514)), url(img/newslatter.jpg);
     background-size: cover;
     animation: none;
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+    .footer {
+        font-size: .5rem;
+    }
+    .start {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    #heading {
+        font-size: 2rem;
+    }
+    .link {
+        padding: 1rem 1rem;
+    }
+    .list {
+        padding: 1rem 1rem;
+        margin: 2rem 3rem;
+        font-size: 1rem;
+    }
 }

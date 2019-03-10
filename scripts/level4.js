@@ -2,15 +2,15 @@ const max = 1
 const min = 10
 
 
-const first = (Math.floor(Math.random() * (max - min)) + min)
-const second = (Math.floor(Math.random() * (max - min)) + min)
-const third = first * second
-const forth = first + second
+const first = (Math.floor(Math.random() * (max - min)) + min) * 3
+const second = (Math.floor(Math.random() * (max - min)) + min) * 3
+const third = first * second * 3
+const forth = second * second * 2
 
 
 
 const head = document.querySelector('#heading')
-head.textContent = `(${forth} - ${first}) x ${second}`
+head.textContent = `${first} x (${third} / ${forth}) x ${second}`
 
 
 document.querySelector('#guess').addEventListener('change', function (a) {
@@ -18,14 +18,16 @@ document.querySelector('#guess').addEventListener('change', function (a) {
 
     newEl = document.createElement('a')
     newEl.textContent = 'Next'
-    newEl.setAttribute('href', 'level2.html')
+    newEl.setAttribute('href', 'level4.html')
     document.querySelector('#cont').appendChild(newEl)
 
+
     let form = a.target.value
-    const randomEquation = `${(forth - first) * second}`
+    const randomEquation = `${first * (third / forth) * second}`
 
     document.querySelector('#button').addEventListener('click', function (e) {
 
+        
         if (form === randomEquation) {
             let p = document.querySelector('p')
             p.textContent = 'You got it right'
